@@ -1,12 +1,13 @@
-package com.example.calculator;
+package lv1.calculator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class App {
-    private static int inputNumber(Scanner sc) {
+    private static int inputNumber() {
         int number = 0;
+        Scanner sc = new Scanner(System.in);
         while (true) {
             try {
                 number = sc.nextInt();
@@ -32,11 +33,10 @@ public class App {
 
         for (;;) {
             System.out.print("첫 번째 숫자를 입력하세요: ");
-            firstNumber = inputNumber(sc);
-
+            firstNumber = inputNumber();
 
             System.out.print("두 번째 숫자를 입력하세요: ");
-            secondNumber = inputNumber(sc);
+            secondNumber = inputNumber();
 
             System.out.print("사칙연산 기호를 입력하세요: ");
 
